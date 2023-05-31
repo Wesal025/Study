@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>HTML Forms</h1>
+
+<form name="form2">
+  <h2>   enter length</h2>
+  <input type="text" name="length"><br>
+ <h3>enter width</h3>
+ <input type="text" name="width"><br>
+ <h4>enter height</h4>
+ <input type="text" name="height"><br>
+ <input type="text" name="volume"><br>
+  <input type="button" value="calculate volume" onclick="afunction()"><br><br>
+  
+</form> 
+<script>
+    function afunction(){
+        var r=document.form2.volume.value;
+        var a=3.14*r*r;
+        document.form2.area.value=a;
+        alert(a);
+
+
+    }
+
+</script>
+
+
+</body>
+
+
+</html>
+
