@@ -1,5 +1,5 @@
 <html>
-    <title>my web page </title>
+    <title>Verify Data</title>
     <head>
         <script>
             function validate()
@@ -16,8 +16,8 @@
                     alert("invalid Data")
                 }
             }
-    function Email()
-    {
+            function Email()
+            {
 
             var stre=document.myform.Edata.value;
                 const patrn=/\w+@\w+.\w{3}/;
@@ -43,27 +43,23 @@
                     alert("invalid Data")
                 }
             }
-        
-              
-            
+    
         </script>
     </head>
     <body>
-        <h1>Validaton function</h1>
-        
-
-
+        <h1>Data Validation Function</h1>
+    
         <form name="myform">
 
 
             <input type="text" name="Tdata">
-            <button onclick="validate()">click </button> 
+            <button onclick="validate()">click </button> <br><br>
 
             <input type="text" name="Edata">
-            <button onclick="Email()">Email</button> 
+            <button onclick="Email()">Email</button> <br><br>
 
             <input type="text" name="Rdata">
-            <button onclick="Reg()">Regno </button> 
+            <button onclick="Reg()">Regno </button> <br><br>
 
 
         </form>
