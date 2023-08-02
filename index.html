@@ -1,19 +1,87 @@
-<html>
-    <head> 
-        <title>Home</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        var a = ["a" , "b" , "c"] ;
+        var b = [1,2,3];
+        var s = ["Web" , "Compiler" , "V&V"]
+
+
+        document.write("<h3>This is list 1 </h2> ");
+        document.write("<ul>");
+        for(let i=0 ; i < a.length ;  i++)
+        {
+            document.write( "<li>" + a[i] + "</li>");
+        }
+        document.write("</ul>");
+
+
+
+        document.write("<h3>This is list 2 </h2> ")
+        document.write("<ul>");
+        for(let i=0 ; i < b.length ;  i++)
+        {
+            document.write( "<li>" + b[i] + "</li>");
+        }
+        document.write("</ul>");
+
+
+        
+        document.write("<h3>This is table 1  </h2> ");
+        document.write("<table border= '1'>");
+        for(let i=0 ; i < a.length ;  i++)
+        {
+            document.write( "<tr> <td>" + a[i] + "</td> </tr>");
+           
+        }
+        document.write("</table>");
+
+
+        document.write("<h3>This is table 2</h2>");
+        document.write("<table border= '1'>");
+        for(let i=0 ; i < b.length ;  i++)
+        {
+            document.write( "<tr> <td>" + b[i] + "</td> </tr>");
+        }
+        document.write("</table>");
+
+
+        document.write("<h3>This is combined table </h2>");
+        document.write("<table border= '1'>");
+        for(let i=0 ; i < a.length ;  i++)
+        {
+            document.write( "<tr><td>" + a[i] + "</td><td>" + b[i]  + "</td><td>" + "<button>"+ s[i]+ "</button>" + "</td></tr>");
+        }
+        document.write("</table>");
+
+
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write("<h3>By String building </h2>");
+        document.write("<br>");
+        
+        var len = a.length;
+        var text = "<ul>"
+        for(let i=0 ; i < len ;  i++)
+        {
+            text += "<li>" + a[i] + "</li>" ; 
+        }
+        text += "</ul>"
+
+        
+
+
+        
+        document.getElementById("demo").innerHTML = text ;
+    </script>
+
+</head>
 <body>
-    <h1>Wesal Ali</h1>
-    <h2>SU-20-01-001-025</h2>
-    <h3>Select Any Link</h3>   
-    <a href="./Registration/RegNo.html"><h4>Registration</h4></a> <br>
-    <a href="./JavaScript/JavaScript.html"><h4>JS Example</h4></a> <br>
-    <a href="./ResultScript/Area.html"><h4>Calculate Area</h4></a> <br>
-    <a href="./ResultScript/ResultScript5.html"><h4>Table</h4></a> <br>
-    <a href="./ResultScript/LWH.html"><h4>LengthWidthHeight</h4></a> <br>
-    <a href="./Validation/verify.html"><h4>Data Validation</h4></a> <br>
-    
+    <p id="demo"></p>
 </body>
-    
-   
 </html>
