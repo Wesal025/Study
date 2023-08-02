@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #86a3a7;
+      }
+      .container {
+        height: 600px;
+        width: 35%;
+        margin: 0 auto;
+        background-color: #95d6bd;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 10px 10px 10px 10px #076441;
+      }
+    </style>
+
+    <script>
+      function calVal() {
+        var lenght = parseFloat(document.getElementById("len").value);
+        var width = parseFloat(document.getElementById("wid").value);
+        var height= parseFloat(document.getElementById("hei").value);
+        
+        var volume = lenght * width * height ;
+        
+        document.form1.vol.value = volume ;
+       
+      }
+    </script>
+  </head>
+  <body>
+    <form name="form1" class="container">
+      <h1>Area of circle</h1>
+
+        Lenght : <input type="text" id="len" > 
+        
+        <br><br>
+        
+
+        Width : <input type="text" id="wid">
+
+        <br><br>
+      
+        Height : <input type="text"  id="hei">
+
+        <br><br>
+
+        <input type="button" onclick="calVal()" value="Calculate Volume" >
+
+        <br /><br />
+
+        Volume : <input type="text" id="vol" />
+    </form>
+  </body>
+</html>
