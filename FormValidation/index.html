@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   
+
+      <script>
+        function formvalid(){
+          
+
+            var userName = document.form1.txtuserName.value;
+
+            var password = document.form1.txtpassword.value;
+
+            var email = document.form1.txtemail.value;
+
+            if(userName.length == 0)
+            {
+                alert("ID Is Empty / Invalid")
+            }
+
+            if(password.length < 8)
+            {
+                alert("Password Lenght Must Be 8 Character long ")
+            }
+
+            if(email.indexOf('@') < 0 )
+            {
+              alert("Email Must conatin @ Symbol ")
+            }
+
+            var atindex = email.indexOf('@');
+            document.form1.txtatindex.value = atindex ;
+
+            var dotindex = email.indexOf('.');
+            document.form1.txtdotindex.value = dotindex ;
+
+            var emailtype = email.slice(atindex+1, dotindex);
+            document.form1.txtemailtype.value = emailtype;
+            
+        }
+      </script>
+
+
+</head>
+<body>
+    <form  name="form1">
+        <h1>Login Form</h1>
+
+       User Name : <input type="text" name="txtuserName" > 
+          <br><br>
+          
+      Password: <input type="password" name="txtpassword">
+          <br><br>
+
+      Email: <input type="email" name="txtemail">
+          <br><br>
+      
+      @ Index: <input type="text" name="txtatindex">
+          <br><br>
+      
+      . Index: <input type="text" name="txtdotindex">
+          <br><br>
+
+      Email Type : <input type="text" name="txtemailtype">
+          <br><br>
+    
+      <input type="button" onclick="formvalid()" value="OK" >
+          
+  
+          <br /><br />
+  
+         
+      </form>
+    
+</body>
+</html>
